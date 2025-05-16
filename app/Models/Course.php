@@ -14,7 +14,7 @@ class Course extends Model
         return $this->belongsTo(Area::class);
     }
 
-    public function trainingCenter(): BelongsTo
+    public function trainingCenter()
     {
         return $this->belongsTo(TrainingCenter::class);
     }

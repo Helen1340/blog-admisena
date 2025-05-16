@@ -3,20 +3,22 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+
 
 
 class Area extends Model
-{
 
-    public function teachers(): HasMany
+{
+    
+    public function teachers()
     {
         return $this->hasMany(Teacher::class);
     }
 
-    public function courses(): HasMany
+    public function courses()
     {
         return $this->hasMany(Course::class);
     }
 }
+
 

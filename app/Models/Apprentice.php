@@ -3,16 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 
 class Apprentice extends Model
 {
-    public function course(): BelongsTo
+    public function course()
     {
         return $this->belongsTo(Course::class);
     }
 
-    public function computer(): BelongsTo
+    public function computer()
     {
         return $this->belongsTo(Computer::class)->nullable();
     }

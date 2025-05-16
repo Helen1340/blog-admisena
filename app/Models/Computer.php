@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+
 
 class Computer extends Model
 {
-    public function apprentices(): HasMany
+    public function apprentices()
     {
         return $this->hasMany(Apprentice::class);
     }
