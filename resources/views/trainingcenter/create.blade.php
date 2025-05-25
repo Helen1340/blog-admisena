@@ -8,14 +8,16 @@
 </head>
 
 <body>
-    <h1>Formulario de training Center</h1>
+    <h1>Formulario de trainingCenter</h1>
 
     <form action="{{ route('trainingcenter.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label for="title">Nombre:</label>
-        <input type="text" id="title" name="name"><br>
-        <label for="title">location:</label>
-        <input type="text" id="title" name="location"><br>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name"><br> <br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location"><br> <br>
+
         <button type="submit">Enviar</button>
     </form>
 </body>

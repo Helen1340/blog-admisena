@@ -1,28 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section('content')
+<div class="container mt-5">
+    <h1 class="mb-4">Formulario de Computadores
 
-<body>
-    <h1>Formulario de Computers</h1>
-    <br>
-    <form action="{{ route('computer.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form action="{{ route('computer.store') }}" method="POST">
+                @csrf
 
-        <label for="number">Numero</label>
+                <div class="mb-3">
+                    <label for="number" class="form-label">Número</label>
+                    <input type="number" id="number" name="number" class="form-control" value="{{ old('number') }}" required>
+                </div>
 
-        <input type="number" id="number" name="number"> <br>
+                <div class="mb-3">
+                    <label for="brand" class="form-label">Marca</label>
+                    <input type="text" id="brand" name="brand" class="form-control" value="{{ old('brand') }}" required>
+                </div>
 
-        <label for="brand">Marca</label>
-
-        <input type="text" id="brand" name="brand"> <br>
-
-        <button type="submit">Enviar</button>
-    </form>
-</body>
-
-</html>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save"></i> Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
